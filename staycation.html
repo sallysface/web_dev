@@ -1,0 +1,173 @@
+<!--EG 7th HTML Staycation-->
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <title>Staycation HTML</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #2175e4; 
+        color: #01040f; 
+        font-family: "Roboto Slab", serif; 
+        margin: 40px; 
+        padding: 0;
+      }
+      
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px; 
+        margin-top: 30px;
+      }
+      
+      h1 {
+        text-align: center;
+        color: #01040f; 
+        padding-bottom: 10px;
+      }
+      
+      h2 {
+          margin-top: 0;
+          padding-top: 0;
+          color: #01040f;
+      }
+
+      #paragraphs {
+        grid-column: 1 / 2;
+        padding: 20px;
+        border-right: 1px solid #01040f; 
+      }
+
+      .side-content {
+          grid-column: 2 / 3;
+          padding: 20px;
+      }
+      
+      p {
+        padding: 10px 0;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .hiddenSection {
+         display:none;
+      }
+      
+      
+      .hiddenSection img {
+         width: 25%;
+         cursor: pointer;
+      }
+      
+      img {
+        width: 100%; 
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 3px solid #01040f;
+      }
+      
+      ul {
+        list-style-type: none; 
+        padding: 0;
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+      }
+      
+      li {
+        margin-bottom: 10px;
+        padding-left: 10px;
+        border-left: 3px solid #01040f; 
+      }
+      
+      a {
+        display: block; 
+        text-align: center;
+        margin-top: 40px;
+        padding: 15px;
+        background-color: #01040f;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1> Salt Lake city </h1>
+    <hr>
+
+    <main>
+      <div id="paragraphs">
+        <h2>Plot</h2> 
+        <hr>
+        <p> Salt lake is a very pretty and is named after a very salty lake. The salty lake is called the great salt lake and is so salty you can float on it. The city is a beautiful city with the utah university in it and many fun activites to do. The city isnt like normal cities because it is very safe  </p>
+        
+        <h2> Why I Love the Movie!</h2>
+        <p> I love the movie because I use to be a dancer and the dancing is very good! It really connects to me and I am also in love with Patrick Swayze. In the movie he dances with the protagonist and falls in love with her. I wish I was the protagonist in the story so I could dance with him and we could get married. I do think I would be a better partner for him then her but the overall story is really good and really connects to me and the music is really good. </p>
+      </div>
+      
+      <div class="side-content">
+        <h2>Images of the movie</h2> 
+          <img src="https://m.media-amazon.com/images/M/MV5BZmIwZjA1NzUtNTA0OS00OWMyLWE5MzctM2RjOWYxZjQyZDdmXkEyXkFqcGc@._V1_.jpg" alt="dirty dancing"/> 
+          <img src="https://i.guim.co.uk/img/media/f720bd063d64615a1b5b0fbbcd07b3a189fb2e3e/365_30_2899_1740/master/2899.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=e9ffb3b9d07b417081b83c90794a0ea3" alt="dirty dancing dance"/>
+        
+        <hr>
+        
+        <h2>Characters names!</h2>
+        <ul>
+          <li>Frances Houseman/baby: played by Jennifer Grey</li>
+          <li>Johnny Castle: Played by Patrick Swayze</li>
+          <li>Neil Kellerman: Played by Lonny Price</li>
+          <li>Vivian Pressman: played by Miranda Garrison</li>
+          <li>Max Kellerman: played by Jack Weston</li>
+          <li>Penny Johnson: played by Cynthia Rhodes</li>
+          <li>Lisa Houseman: played by Jane Brucker</li>
+          <li>Marge Houseman: played by Kelly Bishop</li>
+          <li>Tito Suarez: played by Charles Coles</li>
+          <li>Robbie Gould: played by Max Cantor</li>
+          <li>Dr.Jake Houseman: played by Jerry Orbach</li>
+        </ul>
+      </div>
+    </main>
+    
+    <hr>
+    <a href="https://en.wikipedia.org/wiki/Dirty_Dancing/" target="_blank" >Dirty Dancing Wiki</a>
+
+    <a onclick="showMore()">More info</a>
+    <div class="hiddenSection">
+      <p> Diry dancing is a old movie made in the 80s. It was a very popular movie because of the storyline and the cast. Personally I like both a lot. The story is almost like footlose with the whole "no ddancing law." It is my favorit movie in the whole world and I like it very very much! My favorit part is when patrick swayzy says " no one puts baby in a corrner. The movie had me interested the whole time. I could watch it on repeate and never get board. I love this movie so much!</p>
+      <img alt="Patrick Swayze and Jennifer Grey"/>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+          const myImage = document.querySelector('.hiddenSection img');
+          const originalSrc = "https://cdn.artphotolimited.com/images/60913d60bd40b85323893a87/1000x1000/patrick-swayze-avec-jennifer-grey-dans-dirty-dancing-en-1987.jpg";
+          const newSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2WisextY31RznaSZPUyx7gEFzD8fNT045g&s";
+
+          myImage.src = originalSrc; 
+
+          function imageIn() {
+            myImage.src = newSrc;
+          }
+          function imageOut() {
+            myImage.src = originalSrc;
+          }
+          
+          myImage.addEventListener('mouseover', imageIn);
+          myImage.addEventListener('mouseout', imageOut);
+          
+          window.showMore = function() {
+            const element = document.querySelector('.hiddenSection');
+            element.style.display = 'block';
+            myImage.src = originalSrc; 
+          }
+      });
+    </script>
+  </body>
+ </html>
