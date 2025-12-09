@@ -4,23 +4,6 @@
     <head>
         <title>HTML First Web Page</title>
         <meta charset="UTF-8">
-        <style>
-            .hidden-content {
-                display: none;
-            }
-            .toggle-btn {
-                background-color: #8B4789;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-            .toggle-btn:hover {
-                background-color: #6B3469;
-            }
-        </style>
     </head>
     <body>
         <h1>⋆｡𖦹°⭒˚｡⋆Sally Face⋆｡𖦹°⭒˚｡⋆</h1>
@@ -38,25 +21,5 @@
         <br>
         <li><b>Lisa Johnson-Fisher:</b>born Lisa Garcia and her first married name Lisa Johnson, was the janitor for Addison Apartments, ex-wife of Jim Johnson, and mother of Larry Johnson. She later married Henry Fisher, becoming Sal Fisher's stepmother. </li>
     </ol>
-            <button class="toggle-btn" onclick="toggleContent('episode-details')">Show More</button>
-        <div id="episode-details" class="hidden-content">
-            <p>Additional details about Episode 1 would go here...</p>
-
-    <script>
-        function toggleContent(elementId) {
-            const element = document.getElementById(elementId);
-            const button = event.target;
-            
-            if (element.style.display === 'none' || element.classList.contains('hidden-content')) {
-                element.classList.remove('hidden-content');
-                element.style.display = 'block';
-                button.textContent = 'Show Less';
-            } else {
-                element.classList.add('hidden-content');
-                element.style.display = 'none';
-                button.textContent = 'Show More';
-            }
-        }
-    </script>
     </body>
 </html>
