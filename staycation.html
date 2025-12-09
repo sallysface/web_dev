@@ -1,0 +1,175 @@
+<!--EG 7th HTML Staycation-->
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <title>Staycation HTML</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #bc6624; 
+        color: #ffffff; 
+        font-family: "Roboto Slab", serif; 
+        margin: 40px; 
+        padding: 0;
+      }
+      
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px; 
+        margin-top: 30px;
+      }
+      
+      h1 {
+        text-align: center;
+        color: #ffffff; 
+        padding-bottom: 10px;
+      }
+      
+      h2 {
+          margin-top: 0;
+          padding-top: 0;
+          color: #ffffff;
+      }
+
+      #paragraphs {
+        grid-column: 1 / 2;
+        padding: 20px;
+        border-right: 1px solid #ffffff; 
+      }
+
+      .side-content {
+          grid-column: 2 / 3;
+          padding: 20px;
+      }
+      
+      p {
+        padding: 10px 0;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .hiddenSection {
+         display:none;
+      }
+      
+      
+      .hiddenSection img {
+         width: 25%;
+         cursor: pointer;
+      }
+      
+      img {
+        width: 100%; 
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 3px solid #ffffff;
+      }
+      
+      ul {
+        list-style-type: none; 
+        padding: 0;
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+      }
+      
+      li {
+        margin-bottom: 10px;
+        padding-left: 10px;
+        border-left: 3px solid #ffffff; 
+      }
+      
+      a {
+        display: block; 
+        text-align: center;
+        margin-top: 40px;
+        padding: 15px;
+        background-color: #ad5e1c;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Arches National Park</h1>
+    <hr>
+
+    <main>
+      <div id="paragraphs">
+        <h2>meo</h2> 
+        <hr>
+        <p>Arch</p>
+        <h2> <h2>
+        <p>  </p>
+      </div>
+      
+      <div class="side-content">
+        <h2></h2> 
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Delicate_arch_sunset.jpg" alt="The Delicate Arch"/> 
+          <img src="https://cdn.pixabay.com/photo/2019/02/05/22/51/raven-at-arches-national-park-3978042_1280.jpg" alt="Raven at Arches"/>
+        
+        <hr>
+        
+        <h2>Kewl Rock Formations</h2>
+        <ul>
+          <li>Balanced Rock</li>
+          <li>Broken Arch</li>
+          <li>Courthouse Towers</li>
+          <li>Delicate Arch</li>
+          <li>Double Arch</li>
+          <li>Landscape Arch</li>
+          <li>Sand Dune Arch</li>
+          <li>Skyline Arch</li>
+          <li>The Windows</li>
+          <li>Devils Garen</li>
+          <li>Fiery Furnace</li>
+          <li>Tower Arch</li>
+          <li>Turret Arch</li>
+          <li>Three Gossips</li>
+        </ul>
+      </div>
+    </main>
+    
+    <hr>
+    <a href="https://www.nps.gov/arch/index.htm" target="_blank" >National Park Service</a>
+
+    <a onclick="showMore()">More info</a>
+    <div class="hiddenSection">
+      <p></p>
+      <img alt=""/>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+          const myImage = document.querySelector('.hiddenSection img');
+          const originalSrc = "https://cdn.artphotolimited.com/images/60913d60bd40b85323893a87/1000x1000/patrick-swayze-avec-jennifer-grey-dans-dirty-dancing-en-1987.jpg";
+          const newSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2WisextY31RznaSZPUyx7gEFzD8fNT045g&s";
+
+          myImage.src = originalSrc; 
+
+          function imageIn() {
+            myImage.src = newSrc;
+          }
+          function imageOut() {
+            myImage.src = originalSrc;
+          }
+          
+          myImage.addEventListener('mouseover', imageIn);
+          myImage.addEventListener('mouseout', imageOut);
+          
+          window.showMore = function() {
+            const element = document.querySelector('.hiddenSection');
+            element.style.display = 'block';
+            myImage.src = originalSrc; 
+          }
+      });
+    </script>
+  </body>
+ </html>
