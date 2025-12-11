@@ -17,9 +17,7 @@
       }
       
       main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px; 
+        display: block;
         margin-top: 30px;
       }
       
@@ -36,13 +34,10 @@
       }
 
       #paragraphs {
-        grid-column: 1 / 2;
         padding: 20px;
-        border-right: 1px solid #ffffff; 
       }
 
       .side-content {
-          grid-column: 2 / 3;
           padding: 20px;
       }
       
@@ -57,7 +52,7 @@
       
       
       .hiddenSection img {
-         width: 25%;
+         width: 50%;
          cursor: pointer;
       }
       
@@ -70,8 +65,8 @@
       }
       
       ul {
-        list-style-type: none; 
-        padding: 0;
+        list-style-type: disc; 
+        padding-left: 20px;
         display: flex; 
         flex-direction: column; 
         align-items: flex-start; 
@@ -79,20 +74,19 @@
       
       li {
         margin-bottom: 10px;
-        padding-left: 10px;
-        border-left: 3px solid #ffffff; 
+        padding-left: 0;
+        border-left: none; 
       }
       
       a {
-        display: block; 
-        text-align: center;
-        margin-top: 40px;
-        padding: 15px;
-        background-color: #ad5e1c;
-        color: white;
-        text-decoration: none;
+        display: inline; 
+        margin-right: 15px;
+        padding: 0;
+        background-color: transparent;
+        color: #ffffff;
+        text-decoration: underline;
         font-weight: bold;
-        border-radius: 5px;
+        border-radius: 0;
       }
 
     </style>
@@ -103,9 +97,9 @@
 
     <main>
       <div id="paragraphs">
-        <h2>meo</h2> 
+        <h2>About The Park</h2> 
         <hr>
-        <p>Arch</p>
+        <p>Arches National Park is a national park of the United States in eastern Utah. The park is adjacent to the Colorado River, 4 mi (6 km) north of Moab, Utah. The park contains more than 2,000 natural sandstone arches, including the well-known Delicate Arch, which constitute the highest density of natural arches in the world. It also contains a variety of other unique geological resources and formations. The national park lies above an underground evaporite layer or salt bed, which is the main cause of the formation of the arches, spires, balanced rocks, sandstone fins, and eroded monoliths in the area. The park consists of 310.31 km2 (76,680 acres; 119.81 sq mi; 31,031 ha) of high desert located on the Colorado Plateau. The highest elevation in the park is 5,653 ft (1,723 m) at Elephant Butte, and the lowest elevation is 4,085 ft (1,245 m) at the visitor center. The park receives an average of less than 10 in (250 mm) of rain annually. Administered by the National Park Service, the area was originally designated a national monument on April 12, 1929 before being redesignated a national park on November 12, 1971. The park received more than 1.8 million visitors in 2021. This has declined in recent years with visitor numbers in 2024 being just under 1.5 million. From April 1 through October 31, a timed entry reservation is required to visit the park between the hours of 7 a.m. and 4 p.m.</p>
         <h2> <h2>
         <p>  </p>
       </div>
@@ -140,7 +134,7 @@
     <hr>
     <a href="https://www.nps.gov/arch/index.htm" target="_blank" >National Park Service</a>
 
-    <a onclick="showMore()">More info</a>
+    <a onclick="showMore()">More Pictures</a>
     <div class="hiddenSection">
       <p></p>
       <img alt=""/>
@@ -149,8 +143,8 @@
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
           const myImage = document.querySelector('.hiddenSection img');
-          const originalSrc = "https://cdn.artphotolimited.com/images/60913d60bd40b85323893a87/1000x1000/patrick-swayze-avec-jennifer-grey-dans-dirty-dancing-en-1987.jpg";
-          const newSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2WisextY31RznaSZPUyx7gEFzD8fNT045g&s";
+          const originalSrc = "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/grandcountyut/archesnp_8ea6df4a-faaf-4b34-8645-d3ff76a628ff.jpg";
+          const newSrc = "https://www.nps.gov/common/uploads/grid_builder/arch/crop16_9/8E09FEF8-1DD8-B71B-0BB792C19048545A.jpg?width=640&quality=90&mode=crop";
 
           myImage.src = originalSrc; 
 
